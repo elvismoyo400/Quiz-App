@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app">
+    <section class="home-box">
+        <h1>My Quiz App</h1>
+        <h3>Welcome to the Quiz App!</h3>
+        <p>Get ready to test your knowledge with 10 random questions!</p>
+        <button type="button" class="start-quiz-btn">Start Quiz</button>
+    </section>
+    <section class="quiz-box" aria-labelledby="question-text" hidden>
+        <div class="quiz-header">
+            <p class="question-number"></p>
+        </div>
+        <h2 class="question-text" id="question-text" tabindex="-1" aria-live="polite"></h2>
+        <div class="option-container" role="group" aria-labelledby="question-text"></div>
+        <div class="next-button-container">
+            <button type="button" class="previous-button" disabled>Previous</button>
+            <button type="button" class="next-button" disabled>Next</button>
+        </div>
+    </section>
+    <section class="result-box" aria-labelledby="result-title" hidden>
+        <h2 id="result-title">Quiz complete!</h2>
+        <p class="result-score"></p>
+        <p class="result-message"></p>
+        <p class="answers-label">Your answers:</p>
+        <div class="answers-indicator" aria-label="Question results"></div>
+        <div class="answer-review"></div>
+        <button type="button" class="restart-button">Try Again</button>
+    </section>
+    </main>
+    <script src="quiz.js" defer></script>
+</body>
+</html>
